@@ -1,0 +1,27 @@
+
+public class AverageAgeEdmonds {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int johnDoe = 45;
+		int mayDoe = 40;
+		int maddie = 27;
+		int connor = 15;
+		int doug = 12;
+		
+		System.out.println("John's age is: " + johnDoe);
+		System.out.println("May's age is: " + mayDoe);
+		System.out.println("Maddie's age is: " + maddie);
+		System.out.println("Conor's age is: " + connor);
+		System.out.println("Doug's age is: " + doug);
+		
+		double avgAge = (double)(johnDoe + mayDoe + maddie + connor + doug)/2;
+		
+		System.out.println();
+		
+		System.out.println("Average Age is: " + avgAge);
+		
+	}
+
+}

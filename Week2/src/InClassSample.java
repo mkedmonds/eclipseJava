@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class InClassSample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final int INCHES_TO_FOOT = 12; //variable will NOT change during program. must be capitalized with _ as spaces
+		final double SHIPPING_COST = 1.50;
+		final double TAX = .07;
+		double orderTotal = 12.45;
+		
+		
+		double total = orderTotal + (orderTotal * TAX);
+		//Scanner is a predefined method
+		
+		//"in" is a default name for allowing input. Other valid names: "in", "input", "console" 
+		
+		Scanner in = new Scanner(System.in); //will take in new values from console input
+		
+		System.out.println("Please enter your name: ");
+		
+		/*
+		 * Two methods for capturing space
+		 * in.next() - will only catch first value before space
+		 * in.nextLine() - will catch all values until return - RECOMMENDED
+		 * */
+		
+		String firstName = in.nextLine();
+		
+		String newFirstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1).toLowerCase(); //how to format and capitalize first letter in string
+		
+		
+		firstName = firstName.toUpperCase();
+		
+		System.out.println(newFirstName);
+		
+		System.out.println("");
+		
+		System.out.println(firstName + ", Please enter your age: ");
+		
+		int userAge = in.nextInt(); //will pause the program and wait for user input. Puts input into variable
+		
+		System.out.println("You are " + userAge + " years old."); //prints out user input from Scanner
+		
+		System.out.println("");
+		
+		System.out.println("Please enter your moms age: ");
+		
+		int momAge = in.nextInt();
+		
+		int momAgeWhenBorn = momAge - userAge;  //finding difference to mom now to when you were born
+		
+		System.out.println("Your mom was " + (double)momAgeWhenBorn + " when she had you.");
+		
+		System.out.println("");
+		
+		System.out.println("Please enter your GPA: ");
+		
+		double gpa = in.nextDouble();
+		
+		System.out.println("Your GPA is: " + (int)gpa);
+		
+		
+		//Close Scanner "in" ONLY DO THIS AT THE VERY END OF MAIN METHOD
+		
+		in.close();
+
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class InClassSample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Scanner is a predefined method
+		
+		//"in" is a default name for allowing input. Other valid names: "in", "input", "console" 
+		
+		Scanner in = new Scanner(System.in); //will take in new values from console input
+		
+		System.out.println("Please enter your age: ");
+		
+		int userAge = in.nextInt();
+		
+		System.out.println("You are " + userAge + " years old.");
+
+	}
+
+}

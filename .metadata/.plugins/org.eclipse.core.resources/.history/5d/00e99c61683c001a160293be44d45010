@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class InClassSample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Scanner is a predefined method
+		
+		//"in" is a default name for allowing input. Other valid names: "in", "input", "console" 
+		
+		Scanner in = new Scanner(System.in); //will take in new values from console input
+		
+		System.out.println("Please enter your name: ");
+		
+		/*
+		 * Two methods for capturing space
+		 * in.next() - will only catch first value before space
+		 * in.nextLine() - will catch all values until return - RECOMMENDED
+		 * */
+		
+		String firstName = in.nextLine();
+		
+		System.out.println("");
+		
+		System.out.println(firstName + ", Please enter your age: ");
+		
+		int userAge = in.nextInt(); //will pause the program and wait for user input. Puts input into variable
+		
+		System.out.println("You are " + userAge + " years old."); //prints out user input from Scanner
+		
+		System.out.println("");
+		
+		System.out.println("Please enter your moms age: ");
+		
+		int momAge = in.nextInt();
+		
+		int momAgeWhenBorn = momAge - userAge;  //finding difference to mom now to when you were born
+		
+		System.out.println("Your mom was " + momAgeWhenBorn + " when she had you.");
+		
+		
+		//Close Scanner "in" ONLY DO THIS AT THE VERY END OF MAIN METHOD
+		
+		in.close();
+
+	}
+
+}
